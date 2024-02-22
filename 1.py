@@ -70,7 +70,7 @@ conversorT(input,input)
 ##2. Write a function to convert temperature to fahrenheit.
 ##Include an optional keyword argument to specify whether the input is in celcius or kelvin.
 def conversorF (t, celsius=True):
-    """Convierte de C/K a Fahrenheit"""
+    """Convierte desde C/K a Fahrenheit"""
     if celsius == True:
         t = float(input("Introduce temperatura en Celsius: "))
         return "La temperatura en Fahrenheit es: " + str((t*9/5)+32)
@@ -81,5 +81,37 @@ def conversorF (t, celsius=True):
     
 conversorF(input)
 
+##3.Check that the outputs are sensible by trying a few examples
+conversorF(input, False)
+conversorF(input)
+
+##4. Now write a function that converts from farenheit 
+##and uses a keyword argument to specify whether you want the output in celcius or kelvin
+def conversorFromF (F,celsius=True):
+    """Convierte desde Fahrenheit a Celsius ó Kelvin"""
+    if celsius==True:
+        F = float(input("Introduce temperatura en Fahrenheit: "))
+        return "La temperatura en Celsius es: " + str((F-32)*5/9)
+    else: 
+        F = float(input("Introduce temperatura en Fahrenheit: "))
+        return "La temperatura en Kelvin es: " + str(((F-32)*5/9)+273.15)
+
+conversorFromF(input)   
+
+##5. Write a function that takes two arguments (feet and inches) and returns height in meters
+
+def conversorMetros(feet, inches):
+    total_inches = feet * 12 + inches
+    total_meters = total_inches * 0.0254
+    return "La altura en metros es: " + str(total_meters)
+conversorMetros(5,2)
+
+##6. Write a function takes one argument (height in meters) and returns two arguments
+##(feet and inches)
+
+def conversorFeetInches(meters):
+    feet = 
+    inches = meters/0.0254
+    return "La altura es: " + str(feet) +"pies y " + str(inches) +" pulgadas"
     
-    
+       
