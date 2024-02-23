@@ -101,6 +101,7 @@ conversorFromF(input)
 ##5. Write a function that takes two arguments (feet and inches) and returns height in meters
 
 def conversorMetros(feet, inches):
+    """Convierte de pies y pulgadas a metros"""
     total_inches = feet * 12 + inches
     total_meters = total_inches * 0.0254
     return "La altura en metros es: " + str(total_meters)
@@ -108,10 +109,10 @@ conversorMetros(5,2)
 
 ##6. Write a function takes one argument (height in meters) and returns two arguments
 ##(feet and inches)
-
-def conversorFeetInches(meters):
-    feet = 
-    inches = meters/0.0254
-    return "La altura es: " + str(feet) +"pies y " + str(inches) +" pulgadas"
-    
-       
+def conversorFeetInches(metros):
+    """Convierte de metros a pies y pulgadas""" """No me salió"""
+    metros = float(input("Introduce la altura en metros:"))
+    metros_in_ft =(( metros / 0.3048) % 1) * 12
+    metros_in_in = metros_in_ft % 12
+    return metros_in_ft, metros_in_in
+conversorFeetInches(input)
