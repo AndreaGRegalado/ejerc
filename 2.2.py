@@ -58,5 +58,27 @@ soil_moisture_20 = df.SOIL_MOISTURE_20_DAILY.values
 soil_moisture_50 = df.SOIL_MOISTURE_50_DAILY.values
 soil_moisture_100 = df.SOIL_MOISTURE_100_DAILY.values
 date = df.index.values
+
+units = lines[2].split(' ')
+for name, unit in zip(headers, units):
+    print(f'{name}: {unit}')
 ##################################
+
+#3 graficas en vertical
+from matplotlib import pyplot as plt
+fig, axes = plt.subplots(figsize=(12, 10),nrows=3)
+#Primera gráfica
+axes[0].plot(date, t_daily_mean, 
+             color= "#bf00bf",
+             label="Daily mean")
+axes[0].fill_between(date, t_daily_max, t_daily_min,
+                     color="#CBC5C3", 
+                     alpha=0.5, 
+                     label="Daily range")
+axes[0].legend(loc=1)
+
+#axes[1].plot(date, t_daily_mean)
+
+#axes[2].plot(date, t_daily_mean)
+
 
