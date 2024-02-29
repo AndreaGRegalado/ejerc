@@ -85,9 +85,6 @@ axes[0].legend(loc=1,
 ##Nombre eje y, tamaño de letra
 axes[0].set_ylabel(ylabel="Temperature [ºC]",
                    fontsize=11)
-##Quitar fechas del eje x
-#axes[0].get_xaxis().set_visible(False)
-#axes[0].x_axis_label
 ##Grid del fondo, tipo y tamaño de línea
 axes[0].grid(which='major',
              linestyle='--',
@@ -130,9 +127,10 @@ axes[2].set_ylabel(ylabel="Soil Moisure [$m^{3}m^{3}$]",
 axes[2].set_xlim(left= min(date), right= max(date))
 axes[2].set_ylim([0.01,0.34])
 
+#Para quitar las fechas de los ejes x de las dos primeras gráficas sin quitar el grid
 for ax in axes:
     ax.grid(True)
     ax.label_outer()
-
+#Poner el nombre del eje x solo en la última
 plt.xlabel("Date")
 
