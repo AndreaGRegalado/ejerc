@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Wed Feb 28 10:51:38 2024
-Ejercicio More Matplotlib
+Ejercicio More Matplotlib - Line Plots
 @author: andrea.garcia
 """
 ##Problem 1: Line plots
@@ -62,7 +62,7 @@ date = df.index.values
 units = lines[2].split(' ')
 for name, unit in zip(headers, units):
     print(f'{name}: {unit}')
-##################################
+############################################################################################
 
 #3 GRAFICAS EN VERTICAL
 from matplotlib import pyplot as plt
