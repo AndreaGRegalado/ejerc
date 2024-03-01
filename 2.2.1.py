@@ -21,11 +21,15 @@ lat = ds.Y.values
 ######################################
 
 from matplotlib import pyplot as plt
+<<<<<<< HEAD
 import numpy as np
+=======
+>>>>>>> Andrea
 
 
 #GridSpec(nrows, ncols, figure=None, left=None, bottom=None, right=None,
 #top=None, wspace=None, hspace=None, width_ratios=None, height_ratios=None)
+<<<<<<< HEAD
 fig, axes = plt.subplots(figsize=(15, 5), nrows = 1, ncols = 2, gridspec_kw={'width_ratios': [5, 1],
                                             "wspace":0.0025})
 #fig, axes = plt.subplots(figsize=(12, 10),nrows=3) 
@@ -42,11 +46,27 @@ axes[0].set_xlabel(xlabel="Longitude",
                    fontsize=13)
 axes[0].set_ylabel(ylabel="Latitude",
                    fontsize=13)
+=======
+fig, axes = plt.subplots(figsize=(12, 10), nrows = 1, ncols = 2, gridspec_kw={'width_ratios': [5, 2],
+                                            "wspace":0})
+#fig, axes = plt.subplots(figsize=(12, 10),nrows=3) 
+#Mapa
+mapa = axes[0].contourf(lon, lat, temp, 
+                        cmap='magma', 
+                        extend='both')
+axes[0].set_title("Current Global Temperature",
+                  fontsize=8)
+axes[0].set_xlabel(xlabel="Longitude",
+                   fontsize=8)
+axes[0].set_ylabel(ylabel="Latitude",
+                   fontsize=8)
+>>>>>>> Andrea
 axes[0].grid(which='major',
              linestyle='--',
              color="black",
              linewidth=0.5)
 
+<<<<<<< HEAD
 #fig.tight_layout()
 plt.colorbar(mapa,
              label="ªC",
@@ -64,3 +84,10 @@ axes[1].grid(which='major',
              linewidth=0.5)
 axes[1].set_xlim(-30, 30)
 axes[1].set_ylim([-90,90])
+=======
+fig.tight_layout()
+plt.colorbar(mapa,
+             label="ªC")
+
+#axes[1].plot(lon, temp)
+>>>>>>> Andrea
