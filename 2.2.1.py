@@ -26,8 +26,8 @@ import numpy as np
 
 #GridSpec(nrows, ncols, figure=None, left=None, bottom=None, right=None,
 #top=None, wspace=None, hspace=None, width_ratios=None, height_ratios=None)
-fig, axes = plt.subplots(figsize=(15, 6.5), nrows = 1, ncols = 2, gridspec_kw={'width_ratios': [10, 3],
-                                            "wspace":0.025})
+fig, axes = plt.subplots(figsize=(15, 5), nrows = 1, ncols = 2, gridspec_kw={'width_ratios': [5, 1],
+                                            "wspace":0.0025})
 #fig, axes = plt.subplots(figsize=(12, 10),nrows=3) 
 #Mapa
 mapa = axes[0].contourf(lon, lat, temp, 
@@ -57,6 +57,7 @@ media_por_latitud = np.mean(temp, axis=1)
 axes[1].plot(media_por_latitud,lat,
              color="black",
              linewidth=2)
+axes[1].set_title("Zonal Mean Temperature")
 axes[1].grid(which='major',
              linestyle='--',
              color="black",
