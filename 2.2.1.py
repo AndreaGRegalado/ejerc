@@ -34,6 +34,8 @@ mapa = axes[0].contourf(lon, lat, temp,
                         cmap='magma',
                         levels=20,
                         extend='both')
+axes[0].contour(lon,lat,temp>0,
+                cmap="binary")
 axes[0].set_title("Current Global Temperature"
                   )
 axes[0].set_xlabel(xlabel="Longitude",
@@ -52,4 +54,12 @@ plt.colorbar(mapa,
 
 media_por_latitud = np.mean(temp, axis=1)
 
-axes[1].plot(media_por_latitud,lat)
+axes[1].plot(media_por_latitud,lat,
+             color="black",
+             linewidth=2)
+axes[1].grid(which='major',
+             linestyle='--',
+             color="black",
+             linewidth=0.5)
+axes[1].set_xlim(-30, 30)
+axes[1].set_ylim([-90,90])
