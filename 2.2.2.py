@@ -8,6 +8,7 @@ Ejer3 - Scatter Plots
 from matplotlib import pyplot as plt
 import numpy as np
 import pooch
+
 fname = pooch.retrieve(
     "https://rabernat.github.io/research_computing/signif.txt.tsv.zip",
     known_hash='22b9f7045bf90fb99e14b95b24c81da3c52a0b4c79acf95d72fbe3a257001dbb',
@@ -22,5 +23,5 @@ longitude = earthquakes[:, 21]
 ####################
 fig, ax = plt.subplots()
 
-mapa = ax.scatter(longitude, latitude, c=earthquakes, s=magnitude)
+mapa = ax.scatter(longitude, latitude, s=magnitude, c=np.log10(depth))
 fig.colorbar(mapa)
