@@ -21,15 +21,15 @@ lat = ds.Y.values
 ######################################
 
 from matplotlib import pyplot as plt
-<<<<<<< HEAD
-=======
+#<<<<<<< HEAD
+#=======
 import numpy as np
->>>>>>> b2bc8a8aa32d4d51c9218d6ecf26f27bbd0a5bc1
+#>>>>>>> b2bc8a8aa32d4d51c9218d6ecf26f27bbd0a5bc1
 
 
 #GridSpec(nrows, ncols, figure=None, left=None, bottom=None, right=None,
 #top=None, wspace=None, hspace=None, width_ratios=None, height_ratios=None)
-<<<<<<< HEAD
+#<<<<<<< HEAD
 fig, axes = plt.subplots(figsize=(12, 10), nrows = 1, ncols = 2, gridspec_kw={'width_ratios': [5, 2],
                                             "wspace":0})
 #fig, axes = plt.subplots(figsize=(12, 10),nrows=3) 
@@ -43,7 +43,7 @@ axes[0].set_xlabel(xlabel="Longitude",
                    fontsize=8)
 axes[0].set_ylabel(ylabel="Latitude",
                    fontsize=8)
-=======
+#=======
 fig, axes = plt.subplots(figsize=(15, 5), nrows = 1, ncols = 2, gridspec_kw={'width_ratios': [5, 1],
                                             "wspace":0.0025})
 #fig, axes = plt.subplots(figsize=(12, 10),nrows=3) 
@@ -60,19 +60,19 @@ axes[0].set_xlabel(xlabel="Longitude",
                    fontsize=13)
 axes[0].set_ylabel(ylabel="Latitude",
                    fontsize=13)
->>>>>>> b2bc8a8aa32d4d51c9218d6ecf26f27bbd0a5bc1
+#>>>>>>> b2bc8a8aa32d4d51c9218d6ecf26f27bbd0a5bc1
 axes[0].grid(which='major',
              linestyle='--',
              color="black",
              linewidth=0.5)
 
-<<<<<<< HEAD
+#<<<<<<< HEAD
 fig.tight_layout()
 plt.colorbar(mapa,
              label="ªC")
 
 #axes[1].plot(lon, temp)
-=======
+#=======
 #fig.tight_layout()
 plt.colorbar(mapa,
              label="ªC",
@@ -90,4 +90,4 @@ axes[1].grid(which='major',
              linewidth=0.5)
 axes[1].set_xlim(-30, 30)
 axes[1].set_ylim([-90,90])
->>>>>>> b2bc8a8aa32d4d51c9218d6ecf26f27bbd0a5bc1
+#>>>>>>> b2bc8a8aa32d4d51c9218d6ecf26f27bbd0a5bc1
