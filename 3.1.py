@@ -32,6 +32,14 @@ df.head()
 describe = df.describe()
 
 #4)Use nlargest to get the top 20 earthquakes by magnitude
-#Como nlargest es para una serie, lo que hacemos es pasarle solo la columna, no el df entero
-df.nlargest(20, ['mag'])
+"""Como nlargest es para una serie, lo que hacemos es pasarle solo la columna, no el df entero.
+Así obtenemos todos los datos del df. Dos maneras de hacerlo, la segunda para asegurarte de que
+no saca terremotos con sitios que estén nulos"""
+top20 = df.nlargest(20, 'mag')
+top20=df[df['place'].notnull()].nlargest(20,'mag')
+
+#Examine the structure of the place column. The state / country information seems to be in there.
+#How would you get it out?
+"""Aquí solo las columnas de place y magnitud, junto con el id (puesto como indice)"""
+top20_2 = top20[['place','mag']]
 
